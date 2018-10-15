@@ -93,8 +93,9 @@ class Anagrafica {
         return nominativo.toLowerCase().compareTo(other.nominativo.toLowerCase());
 
     }
-    
-    public String toString(){
+
+    @Override
+    public String toString() {
         return nominativo + "-" + nascita + "-" + comune;
     }
 
@@ -105,10 +106,12 @@ class Anagrafica {
         Anagrafica a3 = new Anagrafica("Pippo Baudo", "Catania", "10-10-1940");
 
         ArrayList list = new ArrayList();
-        list.add(a1);       
+        list.add(a1);
         list.add(a2);
         list.add(a3);
 
+        System.out.println(list);
+        list.remove(a2);
         System.out.println(list);
 
     }
